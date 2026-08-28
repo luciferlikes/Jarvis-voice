@@ -207,6 +207,13 @@ class ClaudeSession:
                     final = self._stream_once(parts, on_delta, stop_check)
                     if self._aborted or final is None:
                         break
+                    # 用量审计：每轮打印输入/输出 token 数（写进 console_log）
+                    try:
+                        u = getattr(final, "usage", None)
+                        if u is not None:
+                            print(f"[Session] 本轮 tokens：输入 {u.input_tokens} / 输出 {u.output_tokens}")
+                    except Exception:
+                        pass
                     if final.stop_reason != "tool_use":
                         stripped = _strip_blocks(final.content)
                         if stripped:   # 只有 thinking 块的回复不写入历史（网关拒绝空 content）
