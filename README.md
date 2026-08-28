@@ -85,4 +85,4 @@ scripts/              模型下载、冒烟测试、辅助脚本
 
 ## 许可
 
-代码：MIT（待定）。模型文件按其各自许可证（SenseVoice / Vosk / openWakeWord）从官方源下载。
+代码：MIT（见 [LICENSE](LICENSE)）。模型文件按其各自许可证（SenseVoice / Vosk / openWakeWord）从官方源下载，不随本仓库分发。
