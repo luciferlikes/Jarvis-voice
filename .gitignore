@@ -1,0 +1,30 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+.venv/
+
+# ---- 模型文件（体积大 + 各有许可证，用 scripts/download_*.py 下载）----
+models/
+
+# ---- 运行时产物（可能包含隐私对话，绝不能提交）----
+last_record.wav
+tts_reply.mp3
+session_history.json
+console_log.txt
+console_err.txt
+
+# ---- 音频（测试夹具与提示音除外）----
+*.wav
+*.mp3
+!test_audio/
+!test_audio/*.wav
+!chime.wav
+
+# ---- 本地配置与启动器（含绝对路径/个人环境）----
+*.lnk
+.claude/
+desktop.ini
+.running
+
+# ---- 其他 ----
+*.log

@@ -1,0 +1,16 @@
+# 第一~四步所需（后续步骤会陆续加入 pystray、pywebview 等）
+# 语音识别已从 faster-whisper 换成 sherpa-onnx + SenseVoice（更准更快）
+sherpa-onnx
+# 常驻会话流式对话（第七步）：读取 ANTHROPIC_BASE_URL/TOKEN 环境变量
+anthropic
+sounddevice
+keyboard
+numpy
+requests
+pyttsx3
+vosk
+edge-tts
+pystray
+pillow
+pywebview
+openwakeword==0.5.1
